@@ -24,11 +24,49 @@
 
   <div class="wrapper">
 
-    <header>
-      <div class="container"></div>
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a class="header__nav-logo" href="index.html" aria-label="На главную страницу">
+            <img src="img/svg/logo.svg" width="119" height="23" alt="Логотип фитнес центра Supergym.">
+          </a>
+          <a class="header__nav-tel" href="tel:88005555555" aria-label="Позвонить">
+            8-800-555-55-55
+          </a>
+        </nav>
+
+        <section class="promo">
+          <h2 class="visually-hidden">Промо</h2>
+          <div class="promo__wrapper">
+            <div class="promo__content">
+              <div class="promo__content-wrapper">
+                <ul class="promo__list">
+                  <li class="promo__item">Тренажёрный зал</li>
+                  <li class="promo__item">Групповые занятия</li>
+                  <li class="promo__item">Кардио-зона</li>
+                </ul>
+                <div class="promo__content-inner">
+                  <p class="promo__city">Омск</p>
+                  <h1 class="promo__header">Фитнес центр</h1>
+                </div>
+              </div>
+              <a class="promo__link btn btn--white" href="#">Купить абонемент</a>
+            </div>
+            <div class="promo__image">
+              <picture>
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/promo-tablet.webp 1x, img/promo-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/promo.webp 1x, img/promo@2x.webp 2x">
+                <source media="(max-width: 1199px)" srcset="img/promo-tablet.jpg 1x, img/promo-tablet@2x.jpg 2x">
+                <img src="img/promo.jpg" srcset="img/promo@2x.jpg 2x" alt="Спортсмен в футболке супермена.">
+              </picture>
+            </div>
+          </div>
+        </section>
+      </div>
     </header>
 
-    <main>
+    <main class="main">
       <section class="intro">
         <div class="container">
 
@@ -36,8 +74,10 @@
       </section>
     </main>
 
-    <footer>
-      <div class="container"></div>
+    <footer class="footer">
+      <div class="container">
+
+      </div>
     </footer>
 
   </div>

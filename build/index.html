@@ -1,74 +1,89 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Supergym - Омский фитнес центр">
-    <title>Фитнес 2.0</title>
-    <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/alumni-sans-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/roboto-condensed-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/alumni-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/alumni-sans-extrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="img/favicons/apple.png">
-    <link rel="manifest" href="manifest.webmanifest">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Supergym - Омский фитнес центр">
+  <title>Фитнес 2.0</title>
+  <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/alumni-sans-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/alumni-sans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/alumni-sans-extrabold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container">
+        <nav class="header__nav">
+          <a class="header__nav-logo" href="index.html" aria-label="На главную страницу">
+            <img src="img/svg/logo.svg" width="119" height="23" alt="Логотип фитнес центра Supergym.">
+          </a>
+          <a class="header__nav-tel" href="tel:88005555555" aria-label="Позвонить">
+            8-800-555-55-55
+          </a>
+        </nav>
+
+        <section class="promo">
+          <h2 class="visually-hidden">Промо</h2>
+          <div class="promo__wrapper">
+            <div class="promo__content">
+              <div class="promo__content-wrapper">
+                <ul class="promo__list">
+                  <li class="promo__item">Тренажёрный зал</li>
+                  <li class="promo__item">Групповые занятия</li>
+                  <li class="promo__item">Кардио-зона</li>
+                </ul>
+                <div class="promo__content-inner">
+                  <p class="promo__city">Омск</p>
+                  <h1 class="promo__header">Фитнес центр</h1>
+                </div>
+              </div>
+              <a class="promo__link btn btn--white" href="#">Купить абонемент</a>
+            </div>
+            <div class="promo__image">
+              <picture>
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/promo-tablet.webp 1x, img/promo-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/promo.webp 1x, img/promo@2x.webp 2x">
+                <source media="(max-width: 1199px)" srcset="img/promo-tablet.jpg 1x, img/promo-tablet@2x.jpg 2x">
+                <img src="img/promo.jpg" srcset="img/promo@2x.jpg 2x" alt="Спортсмен в футболке супермена.">
+              </picture>
+            </div>
           </div>
         </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
-
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
       </div>
-    </div>
+    </header>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
+    <main class="main">
+      <section class="intro">
+        <div class="container">
+
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+    <footer class="footer">
+      <div class="container">
+
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/vendor.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
