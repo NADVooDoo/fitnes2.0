@@ -1405,6 +1405,7 @@ button,
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 120px 103px;
+  gap: 35px;
 }
 @media (max-width: 1199px) {
   .gym__wrapper {
@@ -1423,36 +1424,24 @@ button,
 @media (max-width: 767px) {
   .gym__wrapper {
     padding: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 
 .gym__media {
   position: relative;
 }
-@media (max-width: 767px) {
-  .gym__media {
-    min-width: 320px;
-  }
-}
-
 .gym__picture {
-  width: 660px;
-}
-@media (max-width: 1199px) {
-  .gym__picture {
-    width: 678px;
-  }
-}
-@media (max-width: 767px) {
-  .gym__picture {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .gym__about {
-  padding-left: 6px;
+  padding-left: 60px;
   padding-top: 56px;
   padding-right: 30px;
+  min-width: 360px;
 }
 @media (max-width: 1199px) {
   .gym__about {
@@ -1465,6 +1454,8 @@ button,
   .gym__about {
     padding-top: 71px;
     text-align: start;
+    padding-left: 15px;
+    min-width: 320px;
   }
 }
 
@@ -1517,7 +1508,7 @@ button,
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
-  max-width: 355px;
+  max-width: 437px;
 }
 @media (max-width: 1199px) {
   .gym__text,
@@ -1531,13 +1522,13 @@ button,
 }
 @media (max-width: 1199px) {
   .gym__text {
-    margin-bottom: 42px;
+    margin-bottom: 7px;
   }
 }
 @media (max-width: 767px) {
   .gym__text {
-    width: 260px;
-    margin-bottom: 31px;
+    margin-bottom: -3px;
+    padding-right: 45px;
   }
 }
 

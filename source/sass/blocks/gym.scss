@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 120px 103px;
+  gap: 35px;
 
   @include vp-1199 {
     flex-direction: column;
@@ -14,6 +15,7 @@
 
   @include vp-767 {
     padding: 0;
+    align-items: start;
   }
 }
 
@@ -21,26 +23,19 @@
   position: relative;
 
   @include vp-767 {
-    min-width: 320px;
+
   }
 }
 
 .gym__picture {
-  width: 660px;
-
-  @include vp-1199 {
-    width: 678px;
-  }
-
-  @include vp-767 {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .gym__about {
-  padding-left: 6px;
+  padding-left: 60px;
   padding-top: 56px;
   padding-right: 30px;
+  min-width: 360px;
 
   @include vp-1199 {
     padding: 0;
@@ -51,6 +46,8 @@
   @include vp-767 {
     padding-top: 71px;
     text-align: start;
+    padding-left: 15px;
+    min-width: 320px;
   }
 }
 
@@ -99,7 +96,7 @@
   font-style: normal;
   font-weight: 300;
   line-height: 150%;
-  max-width: 355px;
+  max-width: 437px;
 
   @include vp-1199 {
     max-width: 550px;
@@ -110,12 +107,12 @@
   margin-bottom: 8px;
 
   @include vp-1199 {
-    margin-bottom: 42px;
+    margin-bottom: 7px;
   }
 
   @include vp-767 {
-    width: 260px;
-    margin-bottom: 31px;
+    margin-bottom: -3px;
+    padding-right: 45px;
   }
 }
 
