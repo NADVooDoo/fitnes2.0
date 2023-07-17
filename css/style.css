@@ -1433,6 +1433,12 @@ button,
 .gym__media {
   position: relative;
 }
+@media (max-width: 767px) {
+  .gym__media {
+    min-width: 320px;
+  }
+}
+
 .gym__picture {
   width: 100%;
 }
