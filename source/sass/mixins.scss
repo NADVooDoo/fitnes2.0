@@ -50,6 +50,12 @@
   }
 }
 
+@mixin vp-1249 {
+  @media (max-width: ($vp-1250 - 1px)) {
+    @content;
+  }
+}
+
 @mixin vp-1199 {
   @media (max-width: ($vp-1200 - 1px)) {
     @content;
@@ -74,6 +80,15 @@
   }
 }
 
+@mixin conic-gradient($from, $at) {
+  background-image: conic-gradient(
+    from $from at $at,
+    $color-venetian-red -46.69deg,
+    $color-dark-cerulean 32.24deg,
+    $color-venetian-red 313.31deg,
+    $color-dark-cerulean 392.24deg
+  );
+}
 
 // ---------------------------------
 

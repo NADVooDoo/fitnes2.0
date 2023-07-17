@@ -1,0 +1,126 @@
+.gym__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 120px 103px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 45px;
+    padding-bottom: 150px;
+  }
+
+  @include vp-767 {
+    padding: 0;
+  }
+}
+
+.gym__media {
+  position: relative;
+
+  @include vp-767 {
+    min-width: 320px;
+  }
+}
+
+.gym__picture {
+  width: 660px;
+
+  @include vp-1199 {
+    width: 678px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.gym__about {
+  padding-left: 6px;
+  padding-top: 56px;
+  padding-right: 30px;
+
+  @include vp-1199 {
+    padding: 0;
+    padding-top: 113px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    padding-top: 71px;
+    text-align: start;
+  }
+}
+
+.gym__header {
+  margin: 0;
+  font-family: $ff-alumni;
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: 1.44px;
+  margin-bottom: 24px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    margin-bottom: 13px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.gym__subheader {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.25px;
+  -webkit-text-stroke: 0.5px;
+  line-height: 150%;
+  margin-bottom: 40px;
+
+  @include vp-1199 {
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 23px;
+  }
+}
+
+.gym__text,
+.gym__subtext {
+  display: block;
+  margin: 0;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  max-width: 355px;
+
+  @include vp-1199 {
+    max-width: 550px;
+  }
+}
+
+.gym__text {
+  margin-bottom: 8px;
+
+  @include vp-1199 {
+    margin-bottom: 42px;
+  }
+
+  @include vp-767 {
+    width: 260px;
+    margin-bottom: 31px;
+  }
+}
+
+.gym__subtext {
+  @include vp-1199 {
+    display: none;
+  }
+}

@@ -67,10 +67,67 @@
     </header>
 
     <main class="main">
-      <section class="intro">
-        <div class="container">
+      <section class="gym">
 
+
+        <div class="gym__wrapper">
+          <div class="container">
+
+            <div class="gym__about">
+              <h2 class="gym__header">Тренажерный зал</h2>
+              <span class="gym__subheader">Просторный зал площадью 900 кв/м</span>
+              <p class="gym__text">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела
+                и
+                здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
+              </p>
+              <p class="gym__subtext">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами.
+                Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+              </p>
+            </div>
+          </div>
+
+          <div class="gym__media">
+
+            <div class="gym__picture">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/gym-mobile.webp 1x, img/gym-mobile@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 1199px)"
+                  srcset="img/gym-tablet.webp 1x, img/gym-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/gym-desktop.webp 1x, img/gym-desktop@2x.webp 2x">
+                <source media="(max-width: 767px)" srcset="img/gym-mobile.jpg 1x, img/gym-mobile@2x.jpg 2x">
+                <source media="(max-width: 1199px)" srcset="img/gym-tablet.jpg 1x, img/gym-tablet@2x.jpg 2x">
+                <img src="img/gym-desktop.jpg" srcset="img/gym-desktop@2x.jpg 2x" width="768" height="401"
+                  alt="Тренажёрный зал." loading="lazy">
+              </picture>
+            </div>
+
+            <div class="gym__video video" data-video>
+
+              <div class="video__player" id="9TZXsZItgdw" data-youtube></div>
+
+              <div class="video__control-backgrounds">
+                <picture>
+                  <source type="image/webp" media="(max-width: 767px)"
+                    srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 1199px)"
+                    srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x">
+                  <source media="(max-width: 767px)" srcset="img/video-mobile.jpg 1x, img/video-mobile@2x.jpg 2x">
+                  <source media="(max-width: 1199px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+                  <img src="img/video-desktop.jpg" srcset="img/video-desktop@2x.jpg 2x" width="768" height="456"
+                    alt="Видео о тренажёрах.">
+                </picture>
+              </div>
+
+              <a class="video__control" href="https://youtube.com/embed/9TZXsZItgdw" aria-label="Запустить видео."
+                data-control>
+              </a>
+
+            </div>
+          </div>
         </div>
+
       </section>
     </main>
 

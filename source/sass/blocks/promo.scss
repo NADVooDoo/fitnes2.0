@@ -77,6 +77,11 @@
   }
 }
 
+.promo__item {
+  font-weight: 300;
+  -webkit-text-stroke: 0.1px;
+}
+
 .promo__header {
   margin: 0;
   letter-spacing: 3px;
@@ -85,6 +90,7 @@
   font-weight: 700;
   text-align: right;
   padding-right: 52px;
+  -webkit-text-stroke: 2px;
 
   @include vp-1199 {
     font-size: 78px;
@@ -96,9 +102,9 @@
   }
 
   @include vp-767 {
-    margin-left: -11px;
-    font-size: 81px;
-    letter-spacing: 0.3px;
+    margin-left: -9px;
+    font-size: 72px;
+    letter-spacing: 3.6px;
   }
 }
 
