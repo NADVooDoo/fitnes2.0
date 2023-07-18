@@ -2,15 +2,18 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 120px 103px;
+  padding: 120px 103px 237px;
   gap: 35px;
+  max-width: 1360px;
+  margin: 0 auto;
+
 
   @include vp-1199 {
     flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 0 45px;
-    padding-bottom: 150px;
+    padding-bottom: 183px;
   }
 
   @include vp-767 {

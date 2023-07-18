@@ -1,0 +1,257 @@
+.membership {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-ghost-white;
+  min-height: 852px;
+  padding-top: 76px;
+
+  @include vp-1199 {
+    min-height: 1780px;
+  }
+
+  @include vp-767 {
+    min-height: 1486px;
+    padding-top: 29px;
+  }
+}
+
+.membership__header {
+  text-align: center;
+  font-family: $ff-alumni;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  margin-bottom: 0;
+
+  @include vp-1199 {
+    font-size: 42px;
+    letter-spacing: 1.26px;
+    margin-top: 18px;
+
+    @include vp-767 {
+      font-size: 32px;
+      letter-spacing: 0.96px;
+    }
+  }
+}
+
+.membership__controls {
+  display: flex;
+  gap: 46px;
+  flex-wrap: wrap;
+  margin: 0 0 21px;
+  padding: 7px 0 0;
+  list-style: none;
+  border-bottom: 2px solid rgba($color-grey, 0.2);
+
+  @include vp-1199 {
+    justify-content: center;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    gap: 42px;
+  }
+}
+
+.membership__control {
+  display: block;
+  border: none;
+  padding: 11px 0;
+  font-size: 20px;
+  line-height: 1.5;
+  color: inherit;
+  outline-offset: 0;
+  background-color: transparent;
+  opacity: 0.5;
+  cursor: pointer;
+
+  @include vp-767 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
+
+.membership__control.is-active {
+  position: relative;
+  opacity: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    background-color: $color-crimson;
+  }
+}
+
+.membership__content {
+  display: block;
+  width: 100%;
+}
+
+.membership__list {
+  position: absolute;
+  left: -119%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1199 {
+    grid-template-columns: 450px;
+    left: -15%;
+    gap: 37px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    left: 0;
+  }
+}
+
+.membership__card {
+  width: 360px;
+  padding: 24px 30px 60px;
+  text-align: center;
+  border: 7px solid transparent;
+  background-color: $color-default-white;
+
+  &:hover,
+  &:focus {
+    border-image: $border-crimson-to-smalt;
+
+    .membership__link {
+      color: $color-default-white;
+      background-image: $crimson-to-cobalt;
+      border: 2px solid $color-default-white;
+    }
+  }
+
+  @include vp-1199 {
+    width: 440px;
+    padding: 28px 30px 60px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 41px 38px 50px 34px;
+  }
+}
+
+.membership__title {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 152.34%;
+  -webkit-text-stroke: 1px;
+  margin-bottom: -11px;
+
+  @include vp-767 {
+    margin: 0;
+    font-size: 22px;
+    line-height: 110.16%;
+  }
+}
+
+.membership__type {
+  font-weight: 300;
+  -webkit-text-stroke: 0.5px;
+
+  @include vp-767 {
+    margin-top: 10px;
+  }
+}
+
+.membership__text {
+  display: flex;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 150%;
+  justify-content: center;
+  margin-top: -11px;
+  z-index: 1;
+
+  @include vp-767 {
+    margin-top: -16px;
+  }
+}
+
+.membership__price {
+  position: relative;
+  padding-left: 9px;
+  color: $color-egyptian-blue;
+  -webkit-text-stroke: 3px;
+  margin-bottom: 35px;
+
+  &::before {
+    position: absolute;
+    content: attr(data-price);
+    text-shadow: -18px -24px 0 $color-grey;
+    color: transparent;
+    font-size: 100px;
+    opacity: 10%;
+
+    @include vp-767 {
+      text-shadow: -40px -16px 0 $color-grey;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 150%;
+    -webkit-text-stroke: 2px;
+    margin-top: 53px;
+    margin-bottom: 31px;
+  }
+}
+
+.membership__money {
+  position: relative;
+  padding-left: 15px;
+  top: 61px;
+
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 150%;
+    top: 54px;
+    padding-left: 11px;
+  }
+}
+
+.membership__link {
+  padding: 18px 45px;
+
+  @include vp-767 {
+    padding: 18px 20px;
+    min-width: 206px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.membership__image {
+  position: absolute;
+  right: 0;
+  top: 84.8%;
+  object-fit: cover;
+
+  @include vp-1199 {
+    top: 90%;
+
+    img {
+      width: 348px;
+      height: 439px;
+    }
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
