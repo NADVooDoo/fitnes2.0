@@ -23,11 +23,17 @@ $color-dark-cerulean:              #003d85;
 $color-venetian-red:               #b80027;
 $color-grey:                       #787878;
 $color-smalt:                      #00359f;
+$color-sapphire-transparent:       rgba(16, 38, 84, 0.89);
+$color-spindle:                    #b6bdcc;
+$color-resolution-blue:            #1c3374;
+$color-crimson-transparent:        rgba(209, 10, 66, 0.20);
+$color-persian-blue:               #2e35ac;
 
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $crimson-to-cobalt:                 linear-gradient(97.05deg, $color-crimson 17.6%, $color-cobalt 95.31%);
+$crimson-to-cobalt-advantages:      linear-gradient(143deg, $color-crimson 0%, $color-cobalt 100%);
 $torch-red-to-cobalt-darker:        linear-gradient(151deg, $color-torch-red 0.85%, $color-cobalt-darker 100%);
 $border-crimson-to-smalt:           linear-gradient(to right bottom, $color-crimson 0, $color-smalt 100%) 1;
 
