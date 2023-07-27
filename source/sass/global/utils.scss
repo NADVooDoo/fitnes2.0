@@ -69,3 +69,12 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.input-message.is-invalid {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: $color-torch-red-lighter;
+}

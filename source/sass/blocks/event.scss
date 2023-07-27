@@ -26,7 +26,7 @@
   }
 
   @include vp-767 {
-    padding-top: 72px;
+    padding-top: 78px;
     padding-bottom: 8px;
     grid-template-columns: 1fr;
   }
@@ -159,6 +159,16 @@
   width: 100%;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+
+  &:hover {
+    color: $color-egyptian-blue;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-sapphire;
+  }
 
   @include vp-1199 {
     margin-top: 15px;

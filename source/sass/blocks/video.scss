@@ -10,11 +10,11 @@
 
   @include vp-767 {
     position: relative;
-    width: 100%;
-    height: auto;
-    min-height: 167px;
-    top: 0;
-    left: 0;
+    width: 321px;
+    height: 200px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding-top: 40px;
     margin-bottom: 70px;
   }
@@ -53,6 +53,11 @@
 
   &:hover {
     background: url("../img/svg/video-play-button-hover.svg");
+    background-size: contain;
+  }
+
+  &:active {
+    background: url("../img/svg/video-play-button-active.svg");
     background-size: contain;
   }
 

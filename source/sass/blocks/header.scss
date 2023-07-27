@@ -2,10 +2,13 @@
   background-color: $color-dark-cerulean;
   color: $color-default-white;
   padding: 38px 0;
+  min-height: 656px;
 
   @include conic-gradient(130.31deg, calc(50% - 465px) 257px);
 
   @include vp-1249 {
+    min-height: 490px;
+
     @include conic-gradient(130.31deg, 160px 257px);
   }
 

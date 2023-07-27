@@ -226,88 +226,104 @@
 }
 
 .coaches__button {
-  display: block;
   position: absolute;
-  top: 243px;
-  width: 18px;
-  height: 34px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  top: calc(50% + 28px);
+  width: 56px;
+  height: 56px;
+  padding: 0;
   background-color: transparent;
-  border: none;
-  transition: opacity 0.3s ease;
+  border: 1px solid transparent;
   cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
 
   &::after {
     content: "";
     position: absolute;
-    top: -5px;
-    width: 44px;
-    height: 44px;
-    background-color: transparent;
+    top: 16px;
+    width: 22.64px;
+    height: 22.64px;
+    border-bottom: 1px solid $color-sapphire;
+    border-left: 1px solid $color-sapphire;
   }
 
-  @include vp-1199 {
-    top: 211px;
+  &:not(:disabled):hover,
+  &:not(:disabled):focus {
+    border: 1px solid $color-sapphire;
+  }
+
+  &:not(:disabled):active {
+    background-color: $color-sapphire;
+
+    &::after {
+      border-left: 1px solid $color-default-white;
+      border-bottom: 1px solid $color-default-white;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
   }
 
   @include vp-767 {
-    width: 12px;
-    height: 21px;
-    top: 58.5%;
+    width: 40px;
+    height: 40px;
 
     &::after {
-      width: 40px;
-      height: 40px;
-      top: -9px;
-      left: -14px;
+      top: 7px;
     }
   }
+}
 
-  &--prev {
-    left: 3px;
-    background-image: url("../img/svg/arrow-prev-desktop.svg");
+.coaches__button--next {
+  right: -15px;
 
-    &::after {
-      left: 0;
-    }
-
-    @include vp-1199 {
-      left: -1px;
-    }
-
-    @include vp-767 {
-      left: 14px;
-      width: 20px;
-      height: 19px;
-    }
+  &::after {
+    left: 10px;
+    transform: rotate(-135deg);
   }
 
-  &--next {
+  @include vp-1199 {
+    top: calc(50% + 11px);
+    right: -21px;
+  }
+
+  @include vp-767 {
     right: 3px;
-    background-image: url("../img/svg/arrow-next-desktop.svg");
+    top: calc(50% + 13px);
 
     &::after {
-      right: 0;
-    }
-
-    @include vp-1199 {
-      right: -1px;
-    }
-
-    @include vp-767 {
-      right: 14px;
-      width: 20px;
-      height: 19px;
+      width: 14px;
+      height: 14px;
+      left: 9px;
+      top: 13px;
     }
   }
+}
 
-  &:hover {
-    opacity: 0.3;
+.coaches__button--prev {
+  left: -15px;
+
+  &::after {
+    right: 10px;
+    transform: rotate(45deg);
   }
 
-  &--nojs {
-    display: none;
+  @include vp-1199 {
+    top: calc(50% + 11px);
+    left: -21px;
+  }
+
+  @include vp-767 {
+    top: calc(50% + 12px);
+    left: 2px;
+
+    &::after {
+      width: 14px;
+      height: 14px;
+      left: 15px;
+      top: 13px;
+    }
   }
 }

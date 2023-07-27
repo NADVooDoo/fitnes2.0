@@ -13,7 +13,7 @@
 
   @include vp-767 {
     min-height: 1539px;
-    padding-top: 29px;
+    padding-top: 38px;
   }
 }
 
@@ -98,7 +98,7 @@
 
 .membership__list {
   position: absolute;
-  left: -119%;
+  left: -121%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
@@ -153,7 +153,6 @@
   font-size: 26px;
   font-weight: 700;
   line-height: 152.34%;
-  -webkit-text-stroke: 1px;
   margin-bottom: -11px;
 
   @include vp-767 {
@@ -164,9 +163,6 @@
 }
 
 .membership__type {
-  font-weight: 300;
-  -webkit-text-stroke: 0.5px;
-
   @include vp-767 {
     margin-top: 10px;
   }
@@ -190,7 +186,6 @@
   position: relative;
   padding-left: 9px;
   color: $color-egyptian-blue;
-  -webkit-text-stroke: 3px;
   margin-bottom: 35px;
 
   &::before {
@@ -209,7 +204,6 @@
   @include vp-767 {
     font-size: 48px;
     line-height: 150%;
-    -webkit-text-stroke: 2px;
     margin-top: 53px;
     margin-bottom: 31px;
   }

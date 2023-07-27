@@ -1,0 +1,248 @@
+.contacts {
+  background-image: linear-gradient(90deg, $color-sapphire 50%, $color-default-white 50%);
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(90deg, $color-sapphire 50%, $color-light-slate-gray 50%) 1;
+  padding-bottom: 3px;
+
+  @include vp-1199 {
+    background-image: none;
+    border: none;
+  }
+}
+
+.contacts .container {
+  display: flex;
+  padding: 0;
+
+  @include vp-1199 {
+    display: block;
+  }
+}
+
+.contacts form {
+  width: 50%;
+  padding: 63px 167px 63px 40px;
+  color: $color-default-white;
+  background-color: $color-sapphire;
+
+  @include vp-1199 {
+    width: 100%;
+    padding: 65px 163px 70px 133px;
+  }
+
+  @include vp-767 {
+    padding: 64px 15px 66px;
+  }
+}
+
+.contacts__block {
+  width: 50%;
+  padding: 55px 38px 60px 121px;
+
+  @include vp-1199 {
+    width: 100%;
+    padding: 62px 38px 55px 130px;
+  }
+
+  @include vp-767 {
+    padding: 63px 15px 55px;
+  }
+}
+
+.contacts__header {
+  font-family: $ff-alumni;
+  margin: 0 0 24px;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 65px;
+  letter-spacing: 1.9px;
+
+  @include vp-1199 {
+    margin-bottom: 23px;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 1.3px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 31px;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.96px;
+  }
+}
+
+.contacts__block-header {
+  font-family: $ff-alumni;
+  margin: 0 0 32px;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 65px;
+  letter-spacing: 1.1px;
+
+  @include vp-1199 {
+    margin-bottom: 25px;
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 28px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+.contacts fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 30px;
+  margin: 0 0 27px;
+  padding: 0;
+  border: none;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    margin: 0 0 33px;
+  }
+}
+
+.contacts input {
+  width: 100%;
+  padding: 7px 0;
+  font-size: 14px;
+  font-family: $ff-roboto;
+  font-weight: 400;
+  line-height: 18px;
+  border: none;
+  outline: none;
+  color: $color-default-white;
+  background-color: $color-sapphire;
+  border-bottom: 1px solid $color-light-slate-gray;
+  transition: all 0.3 ease;
+
+  &:hover {
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  &:focus,
+  &:active {
+    padding: 7px;
+    outline: 1px solid $color-default-white;
+    outline-offset: -1px;
+  }
+
+  &[aria-invalid="true"] {
+    border-bottom: 1px solid $color-torch-red-lighter;
+  }
+}
+
+.contacts input::placeholder {
+  color: $color-default-white;
+}
+
+.contacts__btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 16px;
+  outline: 3px solid $color-default-white;
+  outline-offset: -3px;
+  justify-content: center;
+
+  &:hover {
+    color: $color-egyptian-blue;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-sapphire;
+  }
+}
+
+.contacts__subtitle {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 9px;
+  }
+}
+
+.contacts__wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px 121px;
+  padding-top: 6px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: 6px;
+    left: 51%;
+    width: 1px;
+    background-color: $color-light-slate-gray;
+    transform: translateX(-50%);
+  }
+
+  @include vp-1199 {
+    grid-template-columns: 1fr 1fr;
+    gap: 17px 28px;
+
+    &::before {
+      left: calc(50% - 32px);
+    }
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 17px;
+    margin-top: 8px;
+
+    &::before {
+      width: 0;
+    }
+  }
+}
+
+.contacts__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  a {
+    color: $color-sapphire;
+    transition: all 0.3 ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      opacity: 0.8;
+      outline: none;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+.contacts__content {
+  &--schedule {
+    grid-row: 2/3;
+  }
+}

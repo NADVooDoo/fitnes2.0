@@ -14,6 +14,7 @@ const getSlider = () => {
     const swiper = new Swiper('.coaches__swiper', {
       direction: 'horizontal',
       loop: true,
+      grabCursor: true,
       slidesPerView: 4,
       spaceBetween: 40,
       speed: 1000,
@@ -35,6 +36,21 @@ const getSlider = () => {
       navigation: {
         nextEl: '.coaches__button--next',
         prevEl: '.coaches__button--prev',
+      },
+    });
+  }
+
+  if (document.querySelector('.comments__swiper')) {
+    const commentsSwiper = new Swiper('.comments__swiper', { // eslint-disable-line
+      direction: 'horizontal',
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 110,
+      autoHeight: true,
+
+      navigation: {
+        nextEl: '.comments__button--next',
+        prevEl: '.comments__button--prev',
       },
     });
   }

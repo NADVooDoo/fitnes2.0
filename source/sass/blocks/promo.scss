@@ -78,8 +78,7 @@
 }
 
 .promo__item {
-  font-weight: 300;
-  -webkit-text-stroke: 0.1px;
+  font-weight: 400;
 }
 
 .promo__header {
@@ -129,6 +128,15 @@
 
 .promo__link {
   margin-right: 50px;
+
+  &:hover {
+    color: $color-egyptian-blue;
+    background-color: $color-default-white;
+  }
+
+  &:active {
+    color: $color-sapphire;
+  }
 
   @include vp-1199 {
     margin-right: 5px;

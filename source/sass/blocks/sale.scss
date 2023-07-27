@@ -1,6 +1,6 @@
 .sale__wrapper {
   padding-top: 135px;
-  padding-bottom: 80px;
+  padding-bottom: 120px;
 
   color: $color-resolution-blue;
   font-style: normal;
@@ -9,12 +9,13 @@
   line-height: 23px;
 
   @include vp-1199 {
-    padding-top: 94px;
+    padding-top: 90px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
     padding-top: 63px;
-    padding-bottom: 50px;
+    padding-bottom: 71px;
   }
 }
 
@@ -62,7 +63,7 @@
   grid-template-columns: repeat(2, 1fr);
 
   @include vp-1199 {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
     grid-template-columns: max-content 1fr;
   }
 
@@ -93,10 +94,12 @@
 
 .sale__text {
   margin-bottom: 10px;
-  font-weight: 300;
-  -webkit-text-stroke: 0.3px;
   font-size: 18px;
   line-height: 26px;
+
+  @include vp-1199 {
+    margin-bottom: 7px;
+  }
 }
 
 .sale__money {
@@ -106,7 +109,6 @@
   font-size: 70px;
   font-weight: 700;
   line-height: 110px;
-  -webkit-text-stroke: 1.5px;
 
   @include vp-767 {
     margin-bottom: -6px;
@@ -219,13 +221,13 @@
     align-items: center;
     margin-top: -2px;
   }
+}
 
-  span {
-    margin-bottom: 10px;
+.sale__item-text {
+  margin-bottom: 10px;
 
-    @include vp-1199 {
-      letter-spacing: 0.01em;
-    }
+  @include vp-1199 {
+    letter-spacing: 0.01em;
   }
 }
 
@@ -234,7 +236,6 @@
   font-weight: 700;
   line-height: 44px;
   font-size: 26px;
-  -webkit-text-stroke: 1.2px;
 
   @include vp-767 {
     margin-bottom: 2px;

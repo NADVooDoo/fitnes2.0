@@ -1,6 +1,6 @@
 .btn {
   display: inline-flex;
-  padding: 14px 55px;
+  padding: 14px 55px 13px 55px;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
@@ -24,13 +24,28 @@
     border: 2px solid $color-sapphire;
   }
 
+  &--dark {
+    color: $color-sapphire;
+    outline: 2px solid $color-sapphire;
+    border: 0;
+    justify-content: center;
+
+    &:hover,
+    &:focus,
+    &.is-active {
+      color: $color-default-white;
+      background-image: $torch-red-to-cobalt-darker;
+      outline: 2px solid transparent;
+    }
+
+    &:active {
+      color: $color-transparent-05;
+    }
+  }
+
   &:disabled {
     opacity: 0.5;
 
     pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
   }
 }
