@@ -14,6 +14,7 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
+@import "global/keyframes";
 
 // Blocks
 // ---------------------------------
@@ -26,7 +27,6 @@
 @import "blocks/promo";
 @import "blocks/gym";
 @import "blocks/video";
-@import "blocks/data-tabs";
 @import "blocks/membership";
 @import "blocks/event";
 @import "blocks/coaches";
@@ -36,6 +36,11 @@
 @import "blocks/comments";
 @import "blocks/contacts";
 @import "blocks/footer";
+
+// Helpers
+// ---------------------------------
+
+@import "helpers/data-tabs";
 
 // ---------------------------------
 

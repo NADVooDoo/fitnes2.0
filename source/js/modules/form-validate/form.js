@@ -2,6 +2,14 @@ import {Validator} from './validator';
 import {callbacks} from './callback';
 import {initPhoneInput} from './init-phone-input';
 
+const firstNameInput = document.getElementById('first-name');
+
+firstNameInput.addEventListener('input', () => {
+  const value = firstNameInput.value;
+  const clearedValue = value.replace(/[^а-яА-ЯЁё]/g, '');
+  firstNameInput.value = clearedValue;
+});
+
 export class Form {
   constructor() {
     this._validator = new Validator();

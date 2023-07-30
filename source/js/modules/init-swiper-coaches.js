@@ -1,4 +1,4 @@
-const getSlider = () => {
+const getSliderCoaches = () => {
   if (document.querySelector('.coaches__swiper')) {
     const coachesSwiper = document.querySelector('.coaches__swiper');
     const coachesSwiperWrapper = document.querySelector('.coaches__swiper-wrapper');
@@ -10,8 +10,7 @@ const getSlider = () => {
       coachesButton.classList.remove('coaches__button--nojs');
     });
 
-    // eslint-disable-next-line no-unused-vars,no-undef
-    const swiper = new Swiper('.coaches__swiper', {
+    return new window.Swiper('.coaches__swiper', { // eslint-disable-next-line no-unused-vars,no-undef
       direction: 'horizontal',
       loop: true,
       grabCursor: true,
@@ -39,21 +38,7 @@ const getSlider = () => {
       },
     });
   }
-
-  if (document.querySelector('.comments__swiper')) {
-    const commentsSwiper = new Swiper('.comments__swiper', { // eslint-disable-line
-      direction: 'horizontal',
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 110,
-      autoHeight: true,
-
-      navigation: {
-        nextEl: '.comments__button--next',
-        prevEl: '.comments__button--prev',
-      },
-    });
-  }
+  return null;
 };
 
-export {getSlider};
+export {getSliderCoaches};

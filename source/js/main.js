@@ -2,9 +2,9 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './modules/form-validate/form';
 import {initVideos} from './modules/video';
 import {initTabs} from './modules/init-tabs';
-import './modules/tabs.js';
-import {getSlider} from './modules/init-swipers';
-import {detailsDetails} from './modules/tabs-faq.js';
+import {getSliderCoaches} from './modules/init-swiper-coaches';
+import {getSliderComments} from './modules/init-swiper-comments';
+import {initTabsFaq} from './modules/tabs-faq';
 
 // ---------------------------------
 
@@ -21,13 +21,14 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    getSlider();
+    getSliderCoaches();
+    getSliderComments();
     const form = new Form();
     window.form = form;
     form.init();
     initVideos();
     initTabs();
-    detailsDetails();
+    initTabsFaq();
   });
 });
 

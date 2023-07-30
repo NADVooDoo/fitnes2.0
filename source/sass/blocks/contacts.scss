@@ -10,7 +10,7 @@
   }
 }
 
-.contacts .container {
+.contacts__wrapper {
   display: flex;
   padding: 0;
 
@@ -139,7 +139,7 @@
 }
 
 .contacts input::placeholder {
-  color: $color-default-white;
+  color: inherit;
 }
 
 .contacts__btn {
@@ -173,7 +173,7 @@
   }
 }
 
-.contacts__wrapper {
+.contacts__block-wrapper {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
