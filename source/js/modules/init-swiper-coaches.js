@@ -10,7 +10,7 @@ const getSliderCoaches = () => {
       coachesButton.classList.remove('coaches__button--nojs');
     });
 
-    return new window.Swiper('.coaches__swiper', { // eslint-disable-next-line no-unused-vars,no-undef
+    return new window.Swiper('.coaches__swiper', {
       direction: 'horizontal',
       loop: true,
       grabCursor: true,
