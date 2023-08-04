@@ -223,3 +223,7 @@
 .faq__answers-details[open] .faq__answers-summary ~ .animated {
   animation: sweep 1.6s ease;
 }
+
+.faq__answers-summary::-webkit-details-marker {
+  display: none;
+}

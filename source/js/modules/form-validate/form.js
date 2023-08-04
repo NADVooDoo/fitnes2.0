@@ -6,7 +6,7 @@ const firstNameInput = document.getElementById('first-name');
 
 firstNameInput.addEventListener('input', () => {
   const value = firstNameInput.value;
-  const clearedValue = value.replace(/[^а-яА-ЯЁё]/g, '');
+  const clearedValue = value.replace(/[^a-zA-Zа-яА-ЯЁё\s-]/g, '');
   firstNameInput.value = clearedValue;
 });
 

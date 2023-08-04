@@ -7,7 +7,7 @@
   }
 
   @include vp-767 {
-    padding-bottom: 55px;
+    padding-bottom: 58px;
   }
 }
 
@@ -17,8 +17,12 @@
   margin: 0 auto;
   padding: 0 60px;
 
+  @include vp-1349 {
+    max-width: 947px;
+  }
+
   @include vp-1199 {
-    max-width: 678px;
+    max-width: 674px;
     padding: 0 56px;
   }
 
@@ -33,6 +37,10 @@
 
   &--nojs {
     overflow: visible;
+  }
+
+  @include vp-1349 {
+    max-width: 840px;
   }
 }
 

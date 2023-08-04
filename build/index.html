@@ -68,7 +68,6 @@
     </header>
 
     <main class="main">
-
       <section class="gym">
         <div class="gym__wrapper">
           <div class="gym__about">
@@ -122,140 +121,106 @@
       <section class="membership" id="membership" data-tabs="parent">
         <div class="container">
           <h2 class="membership__header">Абонементы</h2>
-          <ul class="membership__controls" data-tabs="controls">
-            <li>
-              <button class="membership__control is-active" type="button" data-tabs="control" data-index="0">
-                1 месяц
-              </button>
+          <ul class="membership__control" data-tabs="controls">
+            <li class="membership__control-item">
+              <button class="membership__control-button is-active" type="button" data-tabs="control" id="tab-1"
+                data-index="0">1 месяц</button>
             </li>
-            <li>
-              <button class="membership__control" type="button" data-tabs="control" data-index="1">
-                6 месяцев
-              </button>
+            <li class="membership__control-item">
+              <button class="membership__control-button is-active" type="button" id="tab-2" data-tabs="control"
+                data-index="1">6 месяцев</button>
             </li>
-            <li>
-              <button class="membership__control" type="button" data-tabs="control" data-index="2">
-                12 месяцев
-              </button>
+            <li class="membership__control-item">
+              <button class="membership__control-button is-active" type="button" id="tab-3" data-tabs="control"
+                data-index="2">12 месяцев</button>
             </li>
           </ul>
-          <div class="membership__content" data-tabs="content">
-            <ul class="membership__list is-active" data-tabs="element">
-              <li class="membership__item" tabindex="0">
-                <div class="membership__card">
-                  <h3 class="membership__title">С&nbsp;тренером</h3>
-                  <p class="membership__type">12&nbsp;занятий</p>
-                  <div class="membership__text">
-                    <p class="membership__price" data-price="5000">5000</p>
-                    <span class="membership__money">₽</span>
+          <ul class="membership__content" data-tabs="content" style="height: 446px;">
+            <li class="membership__content-wrapper">
+              <ul class="membership__content-list is-active" data-tabs="element">
+                <li class="membership__content-item" data-tabs-content-item="">
+                  <h3 class="membership__title">С тренером</h3>
+                  <p class="membership__type">12 занятий</p>
+                  <div class="membership__price">
+                    <p class="membership__money" data-price="5000">5000</p>
                   </div>
-                  <a class="membership__link btn btn--blue" href="#!">Купить абонемент</a>
-                </div>
-              </li>
-              <li class="membership__item" tabindex="0">
-                <div class="membership__card">
+                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                </li>
+                <li class="membership__content-item" data-tabs-content-item="">
                   <h3 class="membership__title">Дневной</h3>
-                  <p class="membership__type">с&nbsp;8:00 до&nbsp;17:00</p>
-                  <div class="membership__text">
-                    <p class="membership__price" data-price="1700">1700</p>
-                    <span class="membership__money">₽</span>
+                  <p class="membership__type">с 8:00 до 17:00</p>
+                  <div class="membership__price">
+                    <p class="membership__money" data-price="1700">1700</p>
                   </div>
-                  <a class="membership__link btn btn--blue" href="#!">Купить абонемент</a>
-                </div>
-              </li>
-              <li class="membership__item" tabindex="0">
-                <div class="membership__card">
+                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                </li>
+                <li class="membership__content-item" data-tabs-content-item="">
                   <h3 class="membership__title">Полный день</h3>
-                  <p class="membership__type">с&nbsp;8:00 до&nbsp;22:00</p>
-                  <div class="membership__text">
-                    <p class="membership__price" data-price="2700">2700</p>
-                    <span class="membership__money">₽</span>
+                  <p class="membership__type">с 8:00 до 22:00</p>
+                  <div class="membership__price">
+                    <p class="membership__money" data-price="2700">2700</p>
                   </div>
-                  <a class="membership__link btn btn--blue" href="#!">Купить абонемент</a>
-                </div>
-              </li>
-            </ul>
-            <ul class="membership__list" data-tabs="element">
-              <li class="membership__item" tabindex="0">
-                <div class="membership__card">
-                  <h3 class="membership__title">С&nbsp;тренером</h3>
-                  <p class="membership__type">72&nbsp;занятия</p>
-                  <div class="membership__text">
-                    <p class="membership__price" data-price="23500">23500</p>
-                    <span class="membership__money">₽</span>
+                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                </li>
+              </ul>
+            </li>
+            <li class="membership__content-wrapper">
+              <ul class="membership__content-list" data-tabs="element">
+                <li class="membership__content-item" data-tabs-content-item="">
+                  <h3 class="membership__title">С тренером</h3>
+                  <p class="membership__type">72 занятий</p>
+                  <div class="membership__price">
+                    <p class="membership__money" data-price="23500">23500</p>
                   </div>
-                  <a class="membership__link btn btn--blue" href="#!">Купить абонемент</a>
-                </div>
-              </li>
-              <li class="membership__item" tabindex="0">
-                <div class="membership__card">
+                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                </li>
+                <li class="membership__content-item" data-tabs-content-item="">
                   <h3 class="membership__title">Дневной</h3>
-                  <p class="membership__type">с&nbsp;8:00 до&nbsp;17:00</p>
-                  <div class="membership__text">
-                    <p class="membership__price" data-price="9200">9200</p>
-                    <span class="membership__money">₽</span>
+                  <p class="membership__type">с 8:00 до 17:00</p>
+                  <div class="membership__price">
+                    <p class="membership__money" data-price="9200">9200</p>
                   </div>
-                  <a class="membership__link btn btn--blue" href="#!">Купить абонемент</a>
-                </div>
-              </li>
-              <li class="membership__item" tabindex="0">
-                <div class="membership__card">
+                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                </li>
+                <li class="membership__content-item" data-tabs-content-item="">
                   <h3 class="membership__title">Полный день</h3>
-                  <p class="membership__type">с&nbsp;8:00 до&nbsp;22:00</p>
-                  <div class="membership__text">
-                    <p class="membership__price" data-price="14800">14800</p>
-                    <span class="membership__money">₽</span>
+                  <p class="membership__type">с 8:00 до 22:00</p>
+                  <div class="membership__price">
+                    <p class="membership__money" data-price="14800">14800</p>
                   </div>
-                  <a class="membership__link btn btn--blue" href="#!">Купить абонемент</a>
-                </div>
-              </li>
-            </ul>
-            <ul class="membership__list" data-tabs="element">
-              <li class="membership__item" tabindex="0">
-                <div class="membership__card">
-                  <h3 class="membership__title">С&nbsp;тренером</h3>
-                  <p class="membership__type">144&nbsp;занятия</p>
-                  <div class="membership__text">
-                    <p class="membership__price" data-price="45500">45500</p>
-                    <span class="membership__money">₽</span>
+                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                </li>
+              </ul>
+            </li>
+            <li class="membership__content-wrapper">
+              <ul class="membership__content-list" data-tabs="element">
+                <li class="membership__content-item" data-tabs-content-item="">
+                  <h3 class="membership__title">С тренером</h3>
+                  <p class="membership__type">144 занятий</p>
+                  <div class="membership__price">
+                    <p class="membership__money" data-price="45500">45500</p>
                   </div>
-                  <a class="membership__link btn btn--blue" href="#!">Купить абонемент</a>
-                </div>
-              </li>
-              <li class="membership__item" tabindex="0">
-                <div class="membership__card">
+                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                </li>
+                <li class="membership__content-item" data-tabs-content-item="">
                   <h3 class="membership__title">Дневной</h3>
-                  <p class="membership__type">с&nbsp;8:00 до&nbsp;17:00</p>
-                  <div class="membership__text">
-                    <p class="membership__price" data-price="17500">17500</p>
-                    <span class="membership__money">₽</span>
+                  <p class="membership__type">с 8:00 до 17:00</p>
+                  <div class="membership__price">
+                    <p class="membership__money" data-price="17500">17500</p>
                   </div>
-                  <a class="membership__link btn btn--blue" href="#!">Купить абонемент</a>
-                </div>
-              </li>
-              <li class="membership__item" tabindex="0">
-                <div class="membership__card">
+                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                </li>
+                <li class="membership__content-item" data-tabs-content-item="">
                   <h3 class="membership__title">Полный день</h3>
-                  <p class="membership__type">с&nbsp;8:00 до&nbsp;22:00</p>
-                  <div class="membership__text">
-                    <p class="membership__price" data-price="28000">28000</p>
-                    <span class="membership__money">₽</span>
+                  <p class="membership__type">с 8:00 до 22:00</p>
+                  <div class="membership__price">
+                    <p class="membership__money" data-price="28000">28000</p>
                   </div>
-                  <a class="membership__link btn btn--blue" href="#!">Купить абонемент</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="membership__image">
-          <picture>
-            <source type="image/webp" media="(max-width: 1199px)"
-              srcset="img/membership-tablet.webp 1x, img/membership-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/membership-desktop.webp 1x, img/membership-desktop@2x.webp 2x">
-            <source media="(max-width: 1199px)" srcset="img/membership-tablet.png 1x, img/membership-tablet@2x.png 2x">
-            <img src="img/membership-desktop.png" srcset="img/membership-desktop@2x.png 2x" width="287" height="494"
-              alt="Блины для штанги." loading="lazy">
-          </picture>
+                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -492,10 +457,11 @@
                   <summary class="faq__answers-summary" data-answers-summary>Как стать членом фитнес-центра?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>При первом посещении и покупке абонемента,
+                  <p class="faq__answers-text" data-answers-reply>При первом посещении и&nbsp;покупке абонемента,
                     необходимо заполнить анкету и
-                    подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и договор придет
-                    вам на почту.</p>
+                    подписать договор. При покупке абонемента онлайн, анкета также заполняется онлайн и&nbsp;договор
+                    придет
+                    вам на&nbsp;почту.</p>
                 </details>
               </li>
               <li class="faq__answers-item">
@@ -503,9 +469,9 @@
                   <summary class="faq__answers-summary" data-answers-summary>Где можно посмотреть расписание?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>Расписание можно посмотреть на официальном сайте
-                    фитнес-центра, в приложении
-                    для смартфона или у администратора на ресепшн.</p>
+                  <p class="faq__answers-text" data-answers-reply>Расписание можно посмотреть на&nbsp;официальном сайте
+                    фитнес-центра, в&nbsp;приложении
+                    для смартфона или у&nbsp;администратора на&nbsp;ресепшн.</p>
                 </details>
               </li>
               <li class="faq__answers-item">
@@ -514,11 +480,13 @@
                     полотенца?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>Да, в фитнес-центре есть кулеры, расположенные на
-                    разных этажах. Вы можете
-                    воспользоваться ими, чтобы пополнить свой запас воды во время тренировок.
-                    Касательно полотенец, они предоставляются у администратора на ресепшн. Вы можете взять полотенце за
-                    дополнительную плату или включить его в свой абонемент, в зависимости от выбранной программы и
+                  <p class="faq__answers-text" data-answers-reply>Да, в&nbsp;фитнес-центре есть кулеры, расположенные на
+                    разных этажах. Вы&nbsp;можете
+                    воспользоваться ими, чтобы пополнить свой запас воды во&nbsp;время тренировок.
+                    Касательно полотенец, они предоставляются у&nbsp;администратора на&nbsp;ресепшн. Вы&nbsp;можете
+                    взять полотенце за
+                    дополнительную плату или включить его в&nbsp;свой абонемент, в&nbsp;зависимости от&nbsp;выбранной
+                    программы и
                     условий центра.</p>
                 </details>
               </li>
@@ -528,10 +496,12 @@
                     какова их квалификация?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>В фитнес-клубе работает команда профессиональных
-                    тренеров, состоящая из 10
-                    высококвалифицированных специалистов. Все тренеры обладают соответствующими сертификатами и опытом
-                    работы в области фитнеса и тренировок. Каждый из них специализируется в определенных областях, таких
+                  <p class="faq__answers-text" data-answers-reply>В&nbsp;фитнес-клубе работает команда профессиональных
+                    тренеров, состоящая из&nbsp;10
+                    высококвалифицированных специалистов. Все тренеры обладают соответствующими сертификатами
+                    и&nbsp;опытом
+                    работы в&nbsp;области фитнеса и&nbsp;тренировок. Каждый из&nbsp;них специализируется
+                    в&nbsp;определенных областях, таких
                     как силовые тренировки, групповые занятия, функциональный тренинг или персональное занятия.</p>
                 </details>
               </li>
@@ -543,8 +513,10 @@
                     <span class="faq__answers-sign"></span>
                   </summary>
                   <p class="faq__answers-text" data-answers-reply>При посещении тренажерного зала вам необходимо
-                    оплатить занятия с тренером отдельно. В зале всегда присутствует дежурный тренер, которому можно
-                    задать вопрос, получить небольшую консультацию по тренажеру или технике выполнения упражнения.</p>
+                    оплатить занятия с&nbsp;тренером отдельно. В&nbsp;зале всегда присутствует дежурный тренер, которому
+                    можно
+                    задать вопрос, получить небольшую консультацию по&nbsp;тренажеру или технике выполнения упражнения.
+                  </p>
                 </details>
               </li>
               <li class="faq__answers-item">
@@ -552,11 +524,14 @@
                   <summary class="faq__answers-summary" data-answers-summary>Можно ли заморозить абонемент?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>Да, в нашем фитнес-центре предусмотрена возможность
+                  <p class="faq__answers-text" data-answers-reply>Да, в&nbsp;нашем фитнес-центре предусмотрена
+                    возможность
                     заморозки абонемента.
-                    Если у вас возникла временная невозможность посещать тренировки, вы можете заморозить свой абонемент
-                    на определенный период. Обратите внимание, что возможность заморозки и условия для этого могут
-                    различаться в зависимости от типа абонемента и политики центра.</p>
+                    Если у&nbsp;вас возникла временная невозможность посещать тренировки, вы&nbsp;можете заморозить свой
+                    абонемент
+                    на&nbsp;определенный период. Обратите внимание, что возможность заморозки и&nbsp;условия для этого
+                    могут
+                    различаться в&nbsp;зависимости от&nbsp;типа абонемента и&nbsp;политики центра.</p>
                 </details>
               </li>
               <li class="faq__answers-item">
@@ -565,10 +540,11 @@
                     зала и групповых занятий?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>В нашем фитнес-центре отсутствует лимит по
+                  <p class="faq__answers-text" data-answers-reply>В&nbsp;нашем фитнес-центре отсутствует лимит по
                     посещениям тренажерного зала и
-                    групповым занятиям. Вы можете посещать их столько раз, сколько вам удобно в рамках вашего абонемента
-                    или в соответствии с выбранной программой.</p>
+                    групповым занятиям. Вы&nbsp;можете посещать их&nbsp;столько раз, сколько вам удобно в&nbsp;рамках
+                    вашего абонемента
+                    или в&nbsp;соответствии с&nbsp;выбранной программой.</p>
                 </details>
               </li>
               <li class="faq__answers-item">
@@ -578,8 +554,9 @@
                     <span class="faq__answers-sign"></span>
                   </summary>
                   <p class="faq__answers-text" data-answers-reply>Семейный доступ позволяет регулярным членам семьи
-                    (супругам, детям и т.д.)
-                    использовать услуги фитнес-центра по специальной цене или в рамках одного общего абонемента.</p>
+                    (супругам, детям и&nbsp;т.д.)
+                    использовать услуги фитнес-центра по&nbsp;специальной цене или в&nbsp;рамках одного общего
+                    абонемента.</p>
                 </details>
               </li>
             </ul>
@@ -590,9 +567,10 @@
                     консультированию по вопросам питания?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>Да. Вы можете обратиться как к своему тренеру, так
-                    и к нашему нутрициологу.
-                    Специалист уточнит ваши данные, цели и предложит программу питания.</p>
+                  <p class="faq__answers-text" data-answers-reply>Да. Вы&nbsp;можете обратиться как к&nbsp;своему
+                    тренеру, так
+                    и&nbsp;к&nbsp;нашему нутрициологу.
+                    Специалист уточнит ваши данные, цели и&nbsp;предложит программу питания.</p>
                 </details>
               </li>
               <li class="faq__answers-item">
@@ -601,9 +579,10 @@
                     мероприятия или соревнования?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>В клубе могут проводиться различные мероприятия и
+                  <p class="faq__answers-text" data-answers-reply>В&nbsp;клубе могут проводиться различные мероприятия и
                     соревнования. Чтобы узнать
-                    о предстоящих событиях, рекомендуется проверить расписание на официальном сайте или обратиться к
+                    о&nbsp;предстоящих событиях, рекомендуется проверить расписание на&nbsp;официальном сайте или
+                    обратиться к
                     сотрудникам рецепции для получения актуальной информации.</p>
                 </details>
               </li>
@@ -613,10 +592,11 @@
                     питание?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>Да, в центре можно приобрести специализированные
+                  <p class="faq__answers-text" data-answers-reply>Да, в&nbsp;центре можно приобрести специализированные
                     продукты
-                    для спортсменов и фитнес-энтузиастов. Вам будет предложен широкий выбор белковых напитков,
-                    энергетических батончиков, витаминов и других средств для поддержания активного образа жизни.</p>
+                    для спортсменов и&nbsp;фитнес-энтузиастов. Вам будет предложен широкий выбор белковых напитков,
+                    энергетических батончиков, витаминов и&nbsp;других средств для поддержания активного образа жизни.
+                  </p>
                 </details>
               </li>
               <li class="faq__answers-item">
@@ -624,11 +604,13 @@
                   <summary class="faq__answers-summary" data-answers-summary>Есть ли в центре детская комната?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>Да, в нашем фитнес-центре имеется отдельная детская
+                  <p class="faq__answers-text" data-answers-reply>Да, в&nbsp;нашем фитнес-центре имеется отдельная
+                    детская
                     комната, где дети могут
-                    играть и развлекаться под наблюдением опытных сотрудников. Мы предлагаем удобные условия и
-                    безопасную среду для занятий фитнесом и спортом, позволяя родителям спокойно тренироваться, зная,
-                    что их дети в надежных руках.</p>
+                    играть и&nbsp;развлекаться под наблюдением опытных сотрудников. Мы&nbsp;предлагаем удобные условия и
+                    безопасную среду для занятий фитнесом и&nbsp;спортом, позволяя родителям спокойно тренироваться,
+                    зная,
+                    что их&nbsp;дети в&nbsp;надежных руках.</p>
                 </details>
               </li>
             </ul>
@@ -640,9 +622,11 @@
                   </summary>
                   <p class="faq__answers-text" data-answers-reply>Для тренировок необходимо иметь предназначенную для
                     этого закрытую спортивную
-                    обувь и одежду. Верхняя и нижняя части тела должны быть закрыты (используйте футболки, майки,
-                    спортивные брюки, шорты, кроссовки). В целях безопасности, запрещается тренироваться босиком, в
-                    пляжных или домашних тапочках и т. п., исключения составляют специальные классы (например, йога,
+                    обувь и&nbsp;одежду. Верхняя и&nbsp;нижняя части тела должны быть закрыты (используйте футболки,
+                    майки,
+                    спортивные брюки, шорты, кроссовки). В&nbsp;целях безопасности, запрещается тренироваться босиком, в
+                    пляжных или домашних тапочках и&nbsp;т.&nbsp;п., исключения составляют специальные классы (например,
+                    йога,
                     пилатес).</p>
                 </details>
               </li>
@@ -652,10 +636,13 @@
                     тренировки?
                     <span class="faq__answers-sign"></span>
                   </summary>
-                  <p class="faq__answers-text" data-answers-reply>Да, можно приводить с собой детей на тренировки в
-                    нашем фитнес-центре. У нас
-                    есть детская комната, где дети могут играть и развлекаться под присмотром наших опытных сотрудников.
-                    Родители могут спокойно тренироваться, зная, что их дети находятся рядом и в безопасной среде.</p>
+                  <p class="faq__answers-text" data-answers-reply>Да, можно приводить с&nbsp;собой детей
+                    на&nbsp;тренировки в
+                    нашем фитнес-центре. У&nbsp;нас
+                    есть детская комната, где дети могут играть и&nbsp;развлекаться под присмотром наших опытных
+                    сотрудников.
+                    Родители могут спокойно тренироваться, зная, что их&nbsp;дети находятся рядом
+                    и&nbsp;в&nbsp;безопасной среде.</p>
                 </details>
               </li>
               <li class="faq__answers-item">
@@ -666,9 +653,12 @@
                   </summary>
                   <p class="faq__answers-text" data-answers-reply>Помимо основных правил поведения, существуют
                     некоторые дополнительные правила
-                    и рекомендации посещения фитнес-центра. Вот некоторые из них: принимайте душ до и после тренировок,
-                    используйте полотенце при работе с тренажерами и не забудьте его протереть после использования,
-                    не используйте телефон и другие устройства в зоне тренировок во избежание отвлечения себя и других
+                    и&nbsp;рекомендации посещения фитнес-центра. Вот некоторые из&nbsp;них: принимайте душ
+                    до&nbsp;и&nbsp;после тренировок,
+                    используйте полотенце при работе с&nbsp;тренажерами и&nbsp;не&nbsp;забудьте его протереть после
+                    использования,
+                    не&nbsp;используйте телефон и&nbsp;другие устройства в&nbsp;зоне тренировок во&nbsp;избежание
+                    отвлечения себя и&nbsp;других
                     посетителей.</p>
                 </details>
               </li>
@@ -778,7 +768,6 @@
           </div>
         </div>
       </section>
-
     </main>
 
     <footer class="footer">
