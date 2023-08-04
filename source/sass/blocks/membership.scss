@@ -5,7 +5,6 @@
   background-color: $color-ghost-white;
   text-align: center;
 
-
   @include vp-1199 {
     padding: 65px 0 92px;
   }
@@ -116,21 +115,18 @@
   }
 }
 
-.membership__content {
+.membership__wrapper {
   position: relative;
-  margin: 0;
-  padding: 0;
-  list-style: none;
   z-index: 1;
 
   &::after {
     content: "";
     position: absolute;
-    right: -212px;
+    right: -172px;
     bottom: -216px;
     width: 321px;
     height: 384px;
-    z-index: -1;
+
     background-image: url("../img/membership-background.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -147,17 +143,25 @@
 
   @include vp-1199 {
     &::after {
-      bottom: -188px;
-      right: -48px;
+      bottom: -183px;
+      right: -6px;
       background-size: 91%;
     }
   }
 
   @include vp-767 {
     &::after {
-      width: 0;
+      display: none;
     }
   }
+}
+
+.membership__content {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  z-index: 1;
 }
 
 .membership__content-list {

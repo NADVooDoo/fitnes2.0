@@ -5,7 +5,6 @@ const getSliderComments = () => {
       loop: false,
       slidesPerView: 'auto',
       spaceBetween: 110,
-      autoHeight: true,
 
       navigation: {
         nextEl: '.comments__button--next',

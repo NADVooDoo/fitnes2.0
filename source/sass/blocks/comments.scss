@@ -93,6 +93,7 @@
   padding: 54px 59px 55px 61px;
   color: $color-default-white;
   width: 100%;
+  align-items: start;
 
   @include vp-1199 {
     padding-right: 60px;
