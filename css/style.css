@@ -1505,7 +1505,8 @@ button,
 
 .input-message.is-invalid {
   display: block;
-  margin-top: 4px;
+  position: absolute;
+  margin-top: 2px;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
@@ -2115,11 +2116,24 @@ button,
   align-items: center;
   line-height: 31px;
   letter-spacing: 0.78px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .header__nav-tel {
   color: #ffffff;
   margin-top: -7px;
+  z-index: 1;
+  min-width: 160px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 }
 
 .promo {
@@ -2233,11 +2247,17 @@ button,
   width: 100%;
 }
 
+.gym__picture img {
+  max-height: 401px;
+}
+
 .gym__about {
   padding-left: 60px;
   padding-top: 56px;
   padding-right: 30px;
   min-width: 360px;
+  max-width: 441px;
+  margin-right: 23px;
 }
 
 .gym__header {
@@ -2252,7 +2272,6 @@ button,
 .gym__subheader {
   display: block;
   font-size: 18px;
-  letter-spacing: 0.25px;
   line-height: 150%;
   margin-bottom: 40px;
 }
@@ -2331,174 +2350,235 @@ button,
 }
 
 .membership {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  padding: 78px 0 118px;
   background-color: #f8f9fc;
-  min-height: 921px;
-  padding-top: 76px;
+  text-align: center;
 }
 
 .membership__header {
-  text-align: center;
   font-family: "Alumni Sans", "Arial", sans-serif;
-  font-weight: 600;
+  margin-bottom: 4px;
   font-size: 54px;
+  font-weight: 600;
   line-height: 65px;
   letter-spacing: 0.03em;
-  margin-bottom: 0;
-}
-
-.membership__controls {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 46px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0 0 21px;
-  padding: 7px 0 0;
-  list-style: none;
-  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
 }
 
 .membership__control {
-  display: block;
-  border: none;
-  padding: 11px 0;
-  font-size: 20px;
-  line-height: 1.5;
-  color: inherit;
-  outline-offset: 0;
-  background-color: transparent;
-  opacity: 0.5;
-  cursor: pointer;
+  margin: 0 auto 39px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  gap: 46px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  list-style: none;
 }
 
-.membership__control.is-active {
+.membership__control-button {
   position: relative;
+  padding: 16px 0;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  color: #102654;
+  cursor: pointer;
+  border: none;
+  opacity: 0.5;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.membership__control-button::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.membership__control-button:hover,
+.membership__control-button:focus,
+.membership__control-button:active {
+  outline: none;
   opacity: 1;
 }
 
-.membership__control.is-active::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -2px;
-  left: 0;
-  height: 2px;
+.membership__control-button:hover::after,
+.membership__control-button:focus::after,
+.membership__control-button:active::after {
+  background-color: #d10a42;
+}
+
+.membership__control-button.is-active {
+  opacity: 1;
+}
+
+.membership__control-button.is-active::after {
   background-color: #d10a42;
 }
 
 .membership__content {
-  display: block;
-  width: 100%;
-}
-
-.membership__list {
-  position: absolute;
-  left: -121%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  position: relative;
+  margin: 0;
   padding: 0;
   list-style: none;
-  z-index: 2;
+  z-index: 1;
 }
 
-.membership__card {
-  width: 360px;
-  padding: 24px 30px 60px;
-  text-align: center;
-  border: 7px solid transparent;
+.membership__content::after {
+  content: "";
+  position: absolute;
+  right: -212px;
+  bottom: -216px;
+  width: 321px;
+  height: 384px;
+  z-index: -1;
+  background-image: url("../img/membership-background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+@supports (background-image: url("../img/membership-background.webp")) {
+  .membership__content::after {
+    background-image: url("../img/membership-background.webp");
+  }
+}
+
+.membership__content-list {
+  margin: 0;
+  padding: 0;
+  display: none;
+  list-style: none;
+}
+
+.membership__content-list--active {
+  display: block;
+}
+
+.membership__content-list.is-active {
+  display: -ms-grid;
+  display: grid;
+  gap: 40px;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.membership__content-item {
+  position: relative;
+  padding: 25px 20px 64px 25px;
   background-color: #ffffff;
-  z-index: 2;
+  border: 7px solid transparent;
+  min-width: 361px;
 }
 
-.membership__card:hover,
-.membership__card:focus {
+.membership__content-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  right: -7px;
+  top: -7px;
+  bottom: -7px;
+  border: 7px solid #ffffff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.membership__content-item:hover {
   -o-border-image: linear-gradient(to right bottom, #d10a42 0, #00359f 100%) 1;
   border-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #d10a42), to(#00359f)) 1;
   border-image: linear-gradient(to right bottom, #d10a42 0, #00359f 100%) 1;
 }
 
-.membership__card:hover .membership__link,
-.membership__card:focus .membership__link {
-  color: #ffffff;
-  background-image: linear-gradient(97.05deg, #d10a42 17.6%, #0041ca 95.31%);
-  border: 2px solid #ffffff;
+.membership__content-item:hover::before {
+  border: 7px solid transparent;
 }
 
 .membership__title {
+  margin-bottom: -12px;
   font-size: 26px;
   font-weight: 700;
-  line-height: 152.34%;
-  margin-bottom: -11px;
+  line-height: 30px;
 }
 
-.membership__text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 150%;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-top: -11px;
-  z-index: 1;
-}
-
-.membership__price {
-  position: relative;
-  padding-left: 9px;
-  color: #103aae;
-  margin-bottom: 35px;
-}
-
-.membership__price::before {
-  position: absolute;
-  content: attr(data-price);
-  text-shadow: -18px -24px 0 #787878;
-  color: transparent;
-  font-size: 100px;
-  opacity: 10%;
+.membership__type {
+  margin-bottom: 79px;
+  font-weight: 400;
+  margin-top: 23px;
 }
 
 .membership__money {
   position: relative;
-  padding-left: 15px;
-  top: 61px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto 48px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 60px;
+  color: #103aae;
+  z-index: 0;
+}
+
+.membership__money::before {
+  position: absolute;
+  content: attr(data-price);
+  top: -15px;
+  left: 0;
+  font-size: 100px;
+  line-height: 100px;
+  color: rgba(232, 232, 232, 0.48);
+  -webkit-transform: translate(-9%, -29%);
+  -ms-transform: translate(-9%, -29%);
+  transform: translate(-9%, -29%);
+  z-index: -1;
+  word-break: normal;
+}
+
+.membership__money::after {
+  content: "";
+  display: inline-block;
+  margin-left: 14px;
+  height: 42px;
+  width: 30px;
+  background-image: url("../img/svg/ruble.svg");
+  background-size: cover;
+}
+
+.membership__price {
+  position: relative;
 }
 
 .membership__link {
-  padding: 18px 45px;
+  margin: 0 auto;
+  width: 206px;
+  padding: 20px;
 }
 
-.membership__image {
-  position: absolute;
-  right: 0;
-  top: 55%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  z-index: 1;
+.membership__content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .event {
   background-color: #ffffff;
   position: relative;
-  top: -69px;
 }
 
 .event__content-wrapper {
@@ -2509,7 +2589,7 @@ button,
   grid-template-columns: -webkit-max-content 1fr;
   grid-template-columns: max-content 1fr;
   padding-top: 120px;
-  padding-bottom: 37px;
+  padding-bottom: 105px;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -2517,20 +2597,19 @@ button,
 }
 
 .event__content {
-  max-width: 500px;
   background-color: #ed0233;
-  padding: 80px 77px 86px 76px;
-  -webkit-column-gap: 49px;
-  -moz-column-gap: 49px;
-  column-gap: 49px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2.18fr 1fr;
-  grid-template-columns: 2.18fr 1fr;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -ms-grid-columns: 201px 92px;
+  grid-template-columns: 201px 92px;
+  gap: 19px 50px;
+  padding: 87px 78px 65px;
 }
 
 .event__header {
-  margin: 5px 0 0 0;
+  margin: -3px 0 0 0;
   text-align: center;
   text-transform: uppercase;
   font-family: "Alumni Sans", "Arial", sans-serif;
@@ -2542,14 +2621,13 @@ button,
 }
 
 .event__subheader {
-  margin: 0;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1/3;
-  margin-top: -30px;
+  margin: -54px 0 0;
 }
 
 .event__dates {
@@ -2560,6 +2638,7 @@ button,
   grid-template-columns: -webkit-max-content;
   grid-template-columns: max-content;
   width: 50px;
+  margin-top: 10px;
 }
 
 .event__item-header {
@@ -2578,7 +2657,7 @@ button,
   width: -moz-min-content;
   width: min-content;
   margin-left: 0;
-  padding-bottom: 11px;
+  padding-bottom: 25px;
 }
 
 .event__info::before {
@@ -2591,8 +2670,7 @@ button,
 }
 
 .event__numbers {
-  margin: 0;
-  margin-right: 5px;
+  margin: 0 5px 0 0;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
@@ -3001,7 +3079,7 @@ button,
   font-weight: 800;
   font-size: 71px;
   line-height: 150%;
-  background: linear-gradient(143deg, #d10a42 0%, #0041ca 100%);
+  background: linear-gradient(150deg, #d10a42 4%, #0041ca 55%, #0041ca 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3386,6 +3464,10 @@ button,
   animation: sweep 1.6s ease;
 }
 
+.faq__answers-summary::-webkit-details-marker {
+  display: none;
+}
+
 .comments {
   color: #102654;
   font-size: 16px;
@@ -3688,6 +3770,11 @@ button,
   font-weight: 400;
   line-height: 21px;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .contacts__text a {
@@ -3756,6 +3843,12 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 800px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .footer__link {
@@ -3808,6 +3901,12 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  max-width: 150px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .footer__social-link {
@@ -3924,6 +4023,16 @@ button,
   }
 */
 
+@media (max-width: 1349px) {
+  .coaches__container {
+    max-width: 947px;
+  }
+
+  .coaches__swiper {
+    max-width: 840px;
+  }
+}
+
 @media (max-width: 1249px) {
   .header {
     min-height: 490px;
@@ -3963,11 +4072,11 @@ button,
     -ms-flex-pack: center;
     justify-content: center;
     margin: 0;
-    gap: 23px;
+    gap: 27px;
   }
 
   .promo__content-wrapper {
-    gap: 1px;
+    gap: 0;
     margin-bottom: 37px;
   }
 
@@ -3977,32 +4086,38 @@ button,
 
   .promo__list {
     padding: 186px 0 0;
-    margin-left: -18px;
+    margin-right: -106px;
+    padding-right: 20px;
+  }
+
+  .promo__item {
+    min-width: 113px;
   }
 
   .promo__header {
     font-size: 78px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    padding-right: 8px;
+    padding-right: 2px;
     line-height: 86px;
     text-transform: none;
+    padding-left: 25px;
   }
 
   .promo__city {
     font-size: 34px;
     letter-spacing: 1.02px;
-    padding-right: 11px;
+    padding-right: 6px;
     margin-bottom: 15px;
   }
 
   .promo__link {
-    margin-right: 5px;
+    margin-right: 0;
     padding: 14px 32px;
   }
 
   .promo__image {
-    min-width: 324px;
+    max-width: 324px;
   }
 
   .gym__wrapper {
@@ -4022,6 +4137,8 @@ button,
     padding: 0;
     padding-top: 113px;
     text-align: center;
+    max-width: 510px;
+    margin-right: 0;
   }
 
   .gym__header {
@@ -4032,6 +4149,7 @@ button,
 
   .gym__subheader {
     margin-bottom: 35px;
+    letter-spacing: 0.25px;
   }
 
   .gym__text,
@@ -4048,8 +4166,8 @@ button,
   }
 
   .video {
-    top: 260px;
-    left: 206px;
+    top: 75%;
+    left: 30%;
   }
 
   .video__control-backgrounds {
@@ -4069,57 +4187,53 @@ button,
   }
 
   .membership {
-    min-height: 1829px;
+    padding: 65px 0 92px;
   }
 
   .membership__header {
     font-size: 42px;
-    letter-spacing: 1.26px;
-    margin-top: 18px;
+    line-height: 53px;
   }
 
-  .membership__controls {
+  .membership__control {
+    margin: 0 auto 46px;
+    gap: 54px;
+  }
+
+  .membership__control-button {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .membership__content::after {
+    bottom: -188px;
+    right: -48px;
+    background-size: 91%;
+  }
+
+  .membership__content-list.is-active {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 0;
+    gap: 41px;
+    -ms-grid-columns: 442px;
+    grid-template-columns: 442px;
   }
 
-  .membership__list {
-    -ms-grid-columns: 450px;
-    grid-template-columns: 450px;
-    left: -15%;
-    gap: 37px;
-  }
-
-  .membership__card {
-    width: 440px;
-    padding: 28px 30px 60px;
-  }
-
-  .membership__image {
-    top: 79.8%;
-  }
-
-  .membership__image img {
-    width: 348px;
-    height: 439px;
-  }
-
-  .event {
-    top: -53px;
+  .membership__money {
+    margin: 0 auto 50px;
   }
 
   .event__content-wrapper {
     padding-top: 103px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     font-size: 12px;
     line-height: 18px;
   }
 
   .event__content {
-    max-width: 292px;
-    padding: 45px 44px 50px;
+    max-width: 291px;
+    padding: 45px 10px 12px;
     -webkit-column-gap: 1px;
     -moz-column-gap: 1px;
     column-gap: 1px;
@@ -4135,14 +4249,14 @@ button,
 
   .event__subheader {
     font-size: 12px;
-    margin-top: -26px;
+    margin-top: -44px;
+    text-align: center;
+    margin-left: -37px;
   }
 
   .event__dates {
-    -webkit-transform: translateX(3px);
-    -ms-transform: translateX(3px);
-    transform: translateX(3px);
-    padding-top: 5px;
+    padding-top: 7px;
+    margin-left: -26px;
   }
 
   .event__item {
@@ -4164,15 +4278,13 @@ button,
   }
 
   .event__link {
-    margin-top: 15px;
     font-size: 10px;
     line-height: 12px;
     border-width: 2px;
-    padding: 12px 18px 13px 15px;
-  }
-
-  .event__link {
-    margin-top: 23px;
+    padding: 12px 17px 13px 15px;
+    margin-top: -15px;
+    max-width: 204px;
+    margin-right: 56px;
   }
 
   .coaches {
@@ -4180,7 +4292,7 @@ button,
   }
 
   .coaches__container {
-    max-width: 678px;
+    max-width: 674px;
     padding: 0 56px;
   }
 
@@ -4321,7 +4433,7 @@ button,
   }
 
   .sale__wrapper {
-    padding-top: 90px;
+    padding-top: 94px;
     padding-bottom: 100px;
   }
 
@@ -4514,18 +4626,6 @@ button,
   }
 }
 
-@media (max-width: 1199px) and (max-width: 767px) {
-  .video__control {
-    left: 50%;
-    top: 60%;
-  }
-
-  .membership__header {
-    font-size: 32px;
-    letter-spacing: 0.96px;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
@@ -4554,17 +4654,23 @@ button,
     margin-bottom: 23px;
   }
 
+  .promo__wrapper {
+    -webkit-box-pack: right;
+    -ms-flex-pack: right;
+    justify-content: right;
+  }
+
   .promo__content-wrapper {
     margin-bottom: 23px;
   }
 
   .promo__list {
     padding: 178px 0 0;
-    margin-left: -13px;
+    margin-left: -18px;
   }
 
   .promo__header {
-    margin-left: -9px;
+    margin-left: -55px;
     font-size: 72px;
     letter-spacing: 3.6px;
   }
@@ -4576,12 +4682,11 @@ button,
   }
 
   .promo__link {
-    width: 97%;
+    width: 101%;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-left: 4px;
-    margin-right: 6px;
+    margin-left: -2px;
     padding: 15px 32px;
   }
 
@@ -4622,16 +4727,14 @@ button,
   }
 
   .video {
-    position: relative;
-    width: 321px;
-    height: 200px;
-    top: 100px;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding-top: 40px;
-    margin-bottom: 70px;
+    padding-bottom: 52.25%;
+    margin-top: 39px;
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+    position: static;
+    width: 100%;
+    height: 167px;
   }
 
   .video__control-backgrounds {
@@ -4640,98 +4743,119 @@ button,
     height: auto;
   }
 
+  .video__control {
+    top: 50%;
+  }
+
   .video__player {
     width: 100%;
-    height: auto;
+    height: 250px;
   }
 
   .membership {
-    min-height: 1539px;
-    padding-top: 38px;
+    padding: 108px 0 77px;
   }
 
-  .membership__controls {
-    gap: 42px;
+  .membership__header {
+    margin-bottom: 6px;
+    font-size: 32px;
+    line-height: 38px;
   }
 
   .membership__control {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 150%;
+    margin: 0 auto 34px;
+    width: 100%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 10px;
   }
 
-  .membership__list {
+  .membership__control-button {
+    font-size: 16px;
+  }
+
+  .membership__control-button::after {
+    right: -8px;
+  }
+
+  .membership__content::after {
+    width: 0;
+  }
+
+  .membership__content-list.is-active {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    gap: 35px;
-    left: 0;
+    width: 100%;
+    gap: 47px;
   }
 
-  .membership__card {
-    width: 100%;
-    padding: 41px 38px 50px 34px;
+  .membership__content-item {
+    padding: 19px 20px 40px;
+    min-width: 295px;
   }
 
   .membership__title {
-    margin: 0;
+    margin-bottom: 8px;
     font-size: 22px;
-    line-height: 110.16%;
+    line-height: 24px;
   }
 
   .membership__type {
-    margin-top: 10px;
-  }
-
-  .membership__text {
-    margin-top: -16px;
-  }
-
-  .membership__price::before {
-    text-shadow: -40px -16px 0 #787878;
-  }
-
-  .membership__price {
-    font-size: 48px;
-    line-height: 150%;
-    margin-top: 53px;
-    margin-bottom: 31px;
+    margin-bottom: 61px;
+    margin-top: 0;
   }
 
   .membership__money {
+    margin-bottom: 36px;
     font-size: 48px;
-    line-height: 150%;
-    top: 54px;
-    padding-left: 11px;
   }
 
-  .membership__link {
-    padding: 18px 20px;
-    min-width: 206px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  .membership__money::after {
+    margin-left: 10px;
+    height: 33px;
+    width: 24px;
   }
 
-  .membership__image {
-    display: none;
+  .membership__money::before {
+    top: -6px;
+    font-size: 80px;
+    line-height: 80px;
   }
 
   .event__content-wrapper {
-    padding-top: 78px;
-    padding-bottom: 8px;
+    padding-top: 69px;
+    padding-bottom: 64px;
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 
   .event__content {
-    max-width: 100%;
+    max-width: calc(100% - 4px);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 45px 0 49px;
+  }
+
+  .event__header {
+    padding-right: 0;
+  }
+
+  .event__dates {
+    margin-left: -16px;
+  }
+
+  .event__link {
+    margin-right: 45px;
+  }
+
+  .event__image {
+    max-width: calc(100% - 4px);
   }
 
   .coaches {
-    padding-bottom: 55px;
+    padding-bottom: 58px;
   }
 
   .coaches__container {
@@ -4916,14 +5040,14 @@ button,
 
   .sale__wrapper {
     padding-top: 63px;
-    padding-bottom: 71px;
+    padding-bottom: 70px;
   }
 
   .sale__header {
     -webkit-transform: translateX(-3px);
     -ms-transform: translateX(-3px);
     transform: translateX(-3px);
-    margin-bottom: 42px;
+    margin-bottom: 38px;
     font-size: 32px;
     line-height: 39px;
   }
@@ -4931,7 +5055,6 @@ button,
   .sale__subscription-wrapper {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    grid-auto-rows: 1fr;
   }
 
   .sale__subscription {
@@ -4940,6 +5063,10 @@ button,
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
+  }
+
+  .sale__text {
+    margin-bottom: 29px;
   }
 
   .sale__money {
@@ -5097,7 +5224,7 @@ button,
   }
 
   .contacts form {
-    padding: 64px 15px 66px;
+    padding: 64px 15px 68px;
   }
 
   .contacts__block {
@@ -5185,6 +5312,10 @@ button,
   .footer__navigation-item:first-child {
     margin-top: 34px;
   }
+
+  .footer__social {
+    margin-left: -26px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -5258,4 +5389,16 @@ button,
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
   }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .membership__content::after {
+    background-image: url("../img/membership-background@2x.png");
+  }
+
+@supports (background-image: url("../img/membership-background@2x.webp")) {
+    .membership__content::after {
+      background-image: url("../img/membership-background@2x.webp");
+    }
+}
 }
