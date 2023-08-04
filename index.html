@@ -118,109 +118,111 @@
         </div>
       </section>
 
-      <section class="membership" id="membership" data-tabs="parent">
-        <div class="container">
+      <section class="membership" id="membership">
+        <div class="container membership__wrapper">
           <h2 class="membership__header">Абонементы</h2>
-          <ul class="membership__control" data-tabs="controls">
-            <li class="membership__control-item">
-              <button class="membership__control-button is-active" type="button" data-tabs="control" id="tab-1"
-                data-index="0">1 месяц</button>
-            </li>
-            <li class="membership__control-item">
-              <button class="membership__control-button is-active" type="button" id="tab-2" data-tabs="control"
-                data-index="1">6 месяцев</button>
-            </li>
-            <li class="membership__control-item">
-              <button class="membership__control-button is-active" type="button" id="tab-3" data-tabs="control"
-                data-index="2">12 месяцев</button>
-            </li>
-          </ul>
-          <ul class="membership__content" data-tabs="content" style="height: 446px;">
-            <li class="membership__content-wrapper">
-              <ul class="membership__content-list is-active" data-tabs="element">
-                <li class="membership__content-item" data-tabs-content-item="">
-                  <h3 class="membership__title">С тренером</h3>
-                  <p class="membership__type">12 занятий</p>
-                  <div class="membership__price">
-                    <p class="membership__money" data-price="5000">5000</p>
-                  </div>
-                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
-                </li>
-                <li class="membership__content-item" data-tabs-content-item="">
-                  <h3 class="membership__title">Дневной</h3>
-                  <p class="membership__type">с 8:00 до 17:00</p>
-                  <div class="membership__price">
-                    <p class="membership__money" data-price="1700">1700</p>
-                  </div>
-                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
-                </li>
-                <li class="membership__content-item" data-tabs-content-item="">
-                  <h3 class="membership__title">Полный день</h3>
-                  <p class="membership__type">с 8:00 до 22:00</p>
-                  <div class="membership__price">
-                    <p class="membership__money" data-price="2700">2700</p>
-                  </div>
-                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
-                </li>
-              </ul>
-            </li>
-            <li class="membership__content-wrapper">
-              <ul class="membership__content-list" data-tabs="element">
-                <li class="membership__content-item" data-tabs-content-item="">
-                  <h3 class="membership__title">С тренером</h3>
-                  <p class="membership__type">72 занятий</p>
-                  <div class="membership__price">
-                    <p class="membership__money" data-price="23500">23500</p>
-                  </div>
-                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
-                </li>
-                <li class="membership__content-item" data-tabs-content-item="">
-                  <h3 class="membership__title">Дневной</h3>
-                  <p class="membership__type">с 8:00 до 17:00</p>
-                  <div class="membership__price">
-                    <p class="membership__money" data-price="9200">9200</p>
-                  </div>
-                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
-                </li>
-                <li class="membership__content-item" data-tabs-content-item="">
-                  <h3 class="membership__title">Полный день</h3>
-                  <p class="membership__type">с 8:00 до 22:00</p>
-                  <div class="membership__price">
-                    <p class="membership__money" data-price="14800">14800</p>
-                  </div>
-                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
-                </li>
-              </ul>
-            </li>
-            <li class="membership__content-wrapper">
-              <ul class="membership__content-list" data-tabs="element">
-                <li class="membership__content-item" data-tabs-content-item="">
-                  <h3 class="membership__title">С тренером</h3>
-                  <p class="membership__type">144 занятий</p>
-                  <div class="membership__price">
-                    <p class="membership__money" data-price="45500">45500</p>
-                  </div>
-                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
-                </li>
-                <li class="membership__content-item" data-tabs-content-item="">
-                  <h3 class="membership__title">Дневной</h3>
-                  <p class="membership__type">с 8:00 до 17:00</p>
-                  <div class="membership__price">
-                    <p class="membership__money" data-price="17500">17500</p>
-                  </div>
-                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
-                </li>
-                <li class="membership__content-item" data-tabs-content-item="">
-                  <h3 class="membership__title">Полный день</h3>
-                  <p class="membership__type">с 8:00 до 22:00</p>
-                  <div class="membership__price">
-                    <p class="membership__money" data-price="28000">28000</p>
-                  </div>
-                  <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
+          <div data-tabs="parent">
+            <ul class="membership__control" data-tabs="controls">
+              <li class="membership__control-item">
+                <button class="membership__control-button is-active" type="button" data-tabs="control" id="tab-1"
+                  data-index="0">1 месяц</button>
+              </li>
+              <li class="membership__control-item">
+                <button class="membership__control-button is-active" type="button" id="tab-2" data-tabs="control"
+                  data-index="1">6 месяцев</button>
+              </li>
+              <li class="membership__control-item">
+                <button class="membership__control-button is-active" type="button" id="tab-3" data-tabs="control"
+                  data-index="2">12 месяцев</button>
+              </li>
+            </ul>
+            <ul class="membership__content" data-tabs="content" style="height: 446px;">
+              <li class="membership__content-wrapper">
+                <ul class="membership__content-list is-active" data-tabs="element">
+                  <li class="membership__content-item" data-tabs-content-item="">
+                    <h3 class="membership__title">С тренером</h3>
+                    <p class="membership__type">12 занятий</p>
+                    <div class="membership__price">
+                      <p class="membership__money" data-price="5000">5000</p>
+                    </div>
+                    <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                  </li>
+                  <li class="membership__content-item" data-tabs-content-item="">
+                    <h3 class="membership__title">Дневной</h3>
+                    <p class="membership__type">с 8:00 до 17:00</p>
+                    <div class="membership__price">
+                      <p class="membership__money" data-price="1700">1700</p>
+                    </div>
+                    <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                  </li>
+                  <li class="membership__content-item" data-tabs-content-item="">
+                    <h3 class="membership__title">Полный день</h3>
+                    <p class="membership__type">с 8:00 до 22:00</p>
+                    <div class="membership__price">
+                      <p class="membership__money" data-price="2700">2700</p>
+                    </div>
+                    <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="membership__content-wrapper">
+                <ul class="membership__content-list" data-tabs="element">
+                  <li class="membership__content-item" data-tabs-content-item="">
+                    <h3 class="membership__title">С тренером</h3>
+                    <p class="membership__type">72 занятий</p>
+                    <div class="membership__price">
+                      <p class="membership__money" data-price="23500">23500</p>
+                    </div>
+                    <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                  </li>
+                  <li class="membership__content-item" data-tabs-content-item="">
+                    <h3 class="membership__title">Дневной</h3>
+                    <p class="membership__type">с 8:00 до 17:00</p>
+                    <div class="membership__price">
+                      <p class="membership__money" data-price="9200">9200</p>
+                    </div>
+                    <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                  </li>
+                  <li class="membership__content-item" data-tabs-content-item="">
+                    <h3 class="membership__title">Полный день</h3>
+                    <p class="membership__type">с 8:00 до 22:00</p>
+                    <div class="membership__price">
+                      <p class="membership__money" data-price="14800">14800</p>
+                    </div>
+                    <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="membership__content-wrapper">
+                <ul class="membership__content-list" data-tabs="element">
+                  <li class="membership__content-item" data-tabs-content-item="">
+                    <h3 class="membership__title">С тренером</h3>
+                    <p class="membership__type">144 занятий</p>
+                    <div class="membership__price">
+                      <p class="membership__money" data-price="45500">45500</p>
+                    </div>
+                    <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                  </li>
+                  <li class="membership__content-item" data-tabs-content-item="">
+                    <h3 class="membership__title">Дневной</h3>
+                    <p class="membership__type">с 8:00 до 17:00</p>
+                    <div class="membership__price">
+                      <p class="membership__money" data-price="17500">17500</p>
+                    </div>
+                    <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                  </li>
+                  <li class="membership__content-item" data-tabs-content-item="">
+                    <h3 class="membership__title">Полный день</h3>
+                    <p class="membership__type">с 8:00 до 22:00</p>
+                    <div class="membership__price">
+                      <p class="membership__money" data-price="28000">28000</p>
+                    </div>
+                    <a class="membership__link btn btn--dark" data-tabs-content-btn="" href="#!">Купить абонемент</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
