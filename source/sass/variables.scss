@@ -39,7 +39,8 @@ $color-black-russian:              #030a1a;
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $crimson-to-cobalt:                 linear-gradient(97.05deg, $color-crimson 17.6%, $color-cobalt 95.31%);
-$crimson-to-cobalt-advantages:      linear-gradient(150deg, $color-crimson 4%, $color-cobalt 55%, $color-cobalt 100%);
+$crimson-to-cobalt-advantages-blue: linear-gradient(150deg, $color-crimson 4%, $color-cobalt 55%, $color-cobalt 100%);
+$crimson-to-cobalt-advantages:      linear-gradient(to right bottom, #d10a42 0, #0041ca 87.33%);
 $torch-red-to-cobalt-darker:        linear-gradient(151deg, $color-torch-red 0.85%, $color-cobalt-darker 100%);
 $border-crimson-to-smalt:           linear-gradient(to right bottom, $color-crimson 0, $color-smalt 100%) 1;
 

@@ -259,6 +259,26 @@
   }
 }
 
+.advantages__numbers--blue {
+  display: block;
+  max-width: 110px;
+  margin-top: -28px;
+  font-weight: 800;
+  font-size: 71px;
+  line-height: 150%;
+  background: $crimson-to-cobalt-advantages-blue;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include vp-1199 {
+    font-size: 58px;
+  }
+
+  @include vp-767 {
+    max-width: 220px;
+  }
+}
+
 .advantages__text-equipment {
   display: block;
   margin-top: -18px;
