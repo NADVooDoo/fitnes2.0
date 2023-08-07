@@ -3092,7 +3092,7 @@ button,
   -webkit-text-fill-color: transparent;
 }
 
-.advantages__numbers--blue {
+.advantages__numbers-blue {
   display: block;
   max-width: 110px;
   margin-top: -28px;
@@ -4440,7 +4440,7 @@ button,
     font-size: 58px;
   }
 
-  .advantages__numbers--blue {
+  .advantages__numbers-blue {
     font-size: 58px;
   }
 
@@ -5047,7 +5047,7 @@ button,
     max-width: 220px;
   }
 
-  .advantages__numbers--blue {
+  .advantages__numbers-blue {
     max-width: 220px;
   }
 
