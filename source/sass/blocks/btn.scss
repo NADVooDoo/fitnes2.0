@@ -26,7 +26,7 @@
 
   &--dark {
     color: $color-sapphire;
-    outline: 2px solid $color-sapphire;
+    outline: 2px solid $color-resolution-blue;
     border: 0;
     justify-content: center;
 
@@ -40,6 +40,31 @@
 
     &:active {
       color: $color-transparent-05;
+    }
+  }
+
+  &--color {
+    color: $color-default-white;
+    outline: 2px solid $color-sapphire;
+    border: 0;
+    justify-content: center;
+
+
+    &.is-active {
+      color: $color-default-white;
+      background-image: $torch-red-to-cobalt-darker;
+      outline: 2px solid transparent;
+    }
+
+    &:hover:not(.is-active),
+    &:focus:not(.is-active) {
+      color: $color-egyptian-blue;
+      background-color: $color-default-white;
+      outline: 1px solid $color-sapphire-02;
+    }
+
+    &:active:not(.is-active) {
+      color: $color-sapphire;
     }
   }
 

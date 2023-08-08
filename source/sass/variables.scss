@@ -42,6 +42,7 @@ $crimson-to-cobalt:                 linear-gradient(97.05deg, $color-crimson 17.
 $crimson-to-cobalt-advantages-blue: linear-gradient(150deg, $color-crimson 4%, $color-cobalt 55%, $color-cobalt 100%);
 $crimson-to-cobalt-advantages:      linear-gradient(to right bottom, #d10a42 0, #0041ca 87.33%);
 $torch-red-to-cobalt-darker:        linear-gradient(151deg, $color-torch-red 0.85%, $color-cobalt-darker 100%);
+$torch-red-to-cobalt-darker-sale:   linear-gradient(151deg, $color-torch-red 0.85%, $color-cobalt-darker 100%) 1;
 $border-crimson-to-smalt:           linear-gradient(to right bottom, $color-crimson 0, $color-smalt 100%) 1;
 
 $main-screen-gradient:              conic-gradient(from 151deg at 16.03% 39.06%, $color-dark-cerulean 32.24deg, $color-venetian-red 313.31deg);

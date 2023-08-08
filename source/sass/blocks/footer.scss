@@ -26,6 +26,7 @@
   padding-top: 9px;
   display: flex;
   align-items: end;
+  cursor: pointer;
 
   @include vp-1199 {
     padding-top: 0;
@@ -46,6 +47,14 @@
       width: 68px;
       height: 12px;
     }
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.4;
   }
 }
 
@@ -70,7 +79,7 @@
   list-style: none;
   flex-wrap: wrap;
   max-width: 800px;
-  justify-content: center;
+  justify-content: left;
 
   @include vp-1199 {
     gap: 10px;
@@ -152,11 +161,7 @@
   list-style: none;
   flex-wrap: wrap;
   max-width: 150px;
-  justify-content: center;
-
-  @include vp-767 {
-    margin-left: -26px;
-  }
+  justify-content: left;
 }
 
 .footer__social-link {

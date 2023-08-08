@@ -22,7 +22,8 @@
   }
 
   @include vp-767 {
-    justify-content: right;
+    justify-content: center;
+    position: relative;
   }
 }
 
@@ -156,8 +157,9 @@
   @include vp-767 {
     width: 101%;
     justify-content: center;
-    margin-left: -2px;
     padding: 15px 32px;
+    position: absolute;
+    left: -2px;
   }
 }
 

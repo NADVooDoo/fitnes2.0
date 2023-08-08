@@ -7,7 +7,7 @@
   }
 
   @include vp-767 {
-    padding-bottom: 58px;
+    padding-bottom: 72px;
   }
 }
 
@@ -21,7 +21,7 @@
     max-width: 947px;
   }
 
-  @include vp-1199 {
+  @include vp-1023 {
     max-width: 674px;
     padding: 0 56px;
   }
@@ -334,4 +334,15 @@
       top: 13px;
     }
   }
+}
+
+.coaches__wrapper {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 50px 25px 50px 10px;
+  background-color: transparent;
+  overflow: auto;
 }

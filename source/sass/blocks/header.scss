@@ -52,6 +52,14 @@
   @include vp-767 {
     width: 68px;
   }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
 }
 
 .header__nav-tel {
@@ -73,5 +81,13 @@
     font-size: 20px;
     letter-spacing: 0.4px;
     margin-top: 2px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.4;
   }
 }
