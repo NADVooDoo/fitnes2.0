@@ -4144,6 +4144,11 @@ button,
 .sale__text {
   font-weight: 400;
 }
+@media (max-width: 1199px) {
+  .sale__text {
+    margin-top: 0;
+  }
+}
 @media (max-width: 767px) {
   .sale__text {
     margin: 0;
@@ -4237,6 +4242,11 @@ button,
 .sale__text--large {
   font-size: 18px;
   line-height: 23px;
+}
+@media (max-width: 1199px) {
+  .sale__text--large {
+    margin-top: 14px;
+  }
 }
 @media (max-width: 767px) {
   .sale__text--large {
