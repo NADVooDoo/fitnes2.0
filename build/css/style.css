@@ -3537,7 +3537,7 @@ button,
 @media (max-width: 767px) {
   .coaches__button--next {
     right: 3px;
-    top: calc(50% + 13px);
+    top: calc(50% + 22px);
   }
   .coaches__button--next::after {
     width: 14px;
@@ -3564,7 +3564,7 @@ button,
 }
 @media (max-width: 767px) {
   .coaches__button--prev {
-    top: calc(50% + 12px);
+    top: calc(50% + 22px);
     left: 2px;
   }
   .coaches__button--prev::after {

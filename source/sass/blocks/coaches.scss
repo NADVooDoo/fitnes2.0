@@ -299,7 +299,7 @@
 
   @include vp-767 {
     right: 3px;
-    top: calc(50% + 13px);
+    top: calc(50% + 22px);
 
     &::after {
       width: 14px;
@@ -324,7 +324,7 @@
   }
 
   @include vp-767 {
-    top: calc(50% + 12px);
+    top: calc(50% + 22px);
     left: 2px;
 
     &::after {
