@@ -58,9 +58,9 @@
 
     &:hover:not(.is-active),
     &:focus:not(.is-active) {
-      color: $color-egyptian-blue;
-      background-color: $color-default-white;
-      outline: 1px solid $color-sapphire-02;
+      color: $color-sapphire;
+      background-color: inherit;
+      outline: 1px solid $color-sapphire;
     }
 
     &:active:not(.is-active) {

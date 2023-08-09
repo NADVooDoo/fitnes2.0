@@ -1500,9 +1500,9 @@ button,
   outline: 2px solid transparent;
 }
 .btn--color:hover:not(.is-active), .btn--color:focus:not(.is-active) {
-  color: #103aae;
-  background-color: #ffffff;
-  outline: 1px solid rgba(28, 51, 116, 0.2);
+  color: #102654;
+  background-color: inherit;
+  outline: 1px solid #102654;
 }
 .btn--color:active:not(.is-active) {
   color: #102654;
@@ -3585,6 +3585,11 @@ button,
   background-color: transparent;
   overflow: auto;
 }
+@media (max-width: 767px) {
+  .coaches__wrapper {
+    padding: 44px 21px 50px 0;
+  }
+}
 
 .advantages {
   padding-top: 109px;
@@ -4085,6 +4090,7 @@ button,
   border: 7px solid transparent;
   -o-border-image: linear-gradient(151deg, #ed0233 0.85%, #003eb7 100%) 1;
      border-image: linear-gradient(151deg, #ed0233 0.85%, #003eb7 100%) 1;
+  min-height: 211px;
 }
 .sale__item--large {
   display: -ms-grid;
@@ -4100,9 +4106,6 @@ button,
   background-color: #ed0233;
 }
 @media (max-width: 1199px) {
-  .sale__item {
-    min-height: 211px;
-  }
   .sale__item--large {
     -ms-grid-columns: 1fr 399px;
     grid-template-columns: 1fr 399px;
